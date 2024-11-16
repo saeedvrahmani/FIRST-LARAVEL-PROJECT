@@ -1,4 +1,4 @@
-# I'm making new changes and developing my first laravel project, I'm looking forward to sharing it with you again.
+#FIRST-LARAVEL-ECOMMERCE
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
