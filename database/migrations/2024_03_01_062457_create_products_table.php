@@ -29,6 +29,7 @@ class CreateProductsTable extends Migration
             $table->string('status')->default(1);
             $table->boolean('is_active')->default(0);
             $table->unsignedInteger('delivery_amount')->default(0);
+            $table->unsignedInteger('delivery_amount_per_product')->default(0);
 
 
 

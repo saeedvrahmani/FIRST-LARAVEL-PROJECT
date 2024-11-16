@@ -6,8 +6,9 @@ require("chart.js");
 require("sweetalert");
 require("bootstrap-select");
 require("bootstrap-select/js/i18n/defaults-fa_IR");
+require("../files/jquery.czMore-latest");
 
-
+require("md.bootstrappersiandatetimepicker/dist/jquery.md.bootstrap.datetimepicker.js");
 (function ($) {
     "use strict"; // Start of use strict
 
@@ -21,7 +22,7 @@ require("bootstrap-select/js/i18n/defaults-fa_IR");
     });
 
     // Close any open menu accordions when window is resized below 768px
-    $(window).resize(function () {
+    
         if ($(window).width() < 768) {
             $(".sidebar .collapse").collapse("hide");
         }
@@ -32,8 +33,7 @@ require("bootstrap-select/js/i18n/defaults-fa_IR");
             $(".sidebar").addClass("toggled");
             $(".sidebar .collapse").collapse("hide");
         }
-    });
-
+   
     // Prevent the content wrapper from scrolling when the fixed side navigation hovered over
     $("body.fixed-nav .sidebar").on("mousewheel DOMMouseScroll wheel", function (
         e

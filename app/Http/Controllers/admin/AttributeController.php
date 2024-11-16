@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
 use App\Models\Attribute;
-
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class AttributeController extends Controller
 {
@@ -17,7 +16,7 @@ class AttributeController extends Controller
     public function index()
     {
         $attributes = Attribute::latest()->paginate(20);
-        return view('admin.attributes.index', compact('attributes'));
+        return view('admin.attributes.index' , compact('attributes'));
     }
 
     /**
@@ -43,18 +42,22 @@ class AttributeController extends Controller
         ]);
 
         Attribute::create([
-            'name' => $request->name,
-
+            'name' => $request->name
         ]);
 
-        alert()->success('برند مورد نظر ایجاد شد', 'باتشکر');
+        alert()->success('ویژگی مورد نظر ایجاد شد', 'باتشکر');
         return redirect()->route('admin.attributes.index');
     }
 
-
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
     public function show(Attribute $attribute)
     {
-        return view('admin.attributes.show', compact('attribute'));
+        return view('admin.attributes.show' , compact('attribute'));
     }
 
     /**
@@ -65,7 +68,7 @@ class AttributeController extends Controller
      */
     public function edit(Attribute $attribute)
     {
-        return view('admin.attributes.edit', compact('attribute'));
+        return view('admin.attributes.edit' , compact('attribute'));
     }
 
     /**

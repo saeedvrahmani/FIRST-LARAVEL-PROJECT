@@ -1,29 +1,30 @@
 @extends('admin.layouts.admin')
 
 @section('title')
-    create tags
+    create Tag
 @endsection
 
 @section('content')
+
     <!-- Content Row -->
     <div class="row">
 
-        <div class="col-xl-12 col-md-12 mb-4 p-md-5 bg-white">
-            <div class="mb-4">
+        <div class="col-xl-12 col-md-12 mb-4 p-4 bg-white">
+            <div class="mb-4 text-center text-md-right">
                 <h5 class="font-weight-bold">ایجاد تگ</h5>
             </div>
             <hr>
+
             @include('admin.sections.errors')
+
             <form action="{{ route('admin.tags.store') }}" method="POST">
                 @csrf
 
                 <div class="form-row">
                     <div class="form-group col-md-3">
                         <label for="name">نام</label>
-                        <input class="form-control" id="name" name="name" type="text">
+                        <input class="form-control" id="name" name="name" type="text" value="{{old('name') }}" >
                     </div>
-
-                    
                 </div>
 
                 <button class="btn btn-outline-primary mt-5" type="submit">ثبت</button>
@@ -32,4 +33,5 @@
         </div>
 
     </div>
+
 @endsection

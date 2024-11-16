@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\admin;
+namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
 use App\Models\Tag;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
-class tagController extends Controller
+class TagController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +16,7 @@ class tagController extends Controller
     public function index()
     {
         $tags = Tag::latest()->paginate(20);
-        return view('admin.tags.index', compact('tags'));
+        return view('admin.tags.index' , compact('tags'));
     }
 
     /**
@@ -42,10 +42,10 @@ class tagController extends Controller
         ]);
 
         Tag::create([
-            'name' => $request->name,
-
+            'name' => $request->name
         ]);
-        alert()->success('برند مورد نظر ایجاد شد', 'باتشکر');
+
+        alert()->success('تگ مورد نظر ایجاد شد', 'باتشکر');
         return redirect()->route('admin.tags.index');
     }
 
@@ -57,7 +57,7 @@ class tagController extends Controller
      */
     public function show(Tag $tag)
     {
-        return view('admin.tags.show', compact('tag'));
+        return view('admin.tags.show' , compact('tag'));
     }
 
     /**
@@ -68,7 +68,7 @@ class tagController extends Controller
      */
     public function edit(Tag $tag)
     {
-        return view('admin.tags.edit', compact('tag'));
+        return view('admin.tags.edit' , compact('tag'));
     }
 
     /**
@@ -78,18 +78,17 @@ class tagController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Tag  $tag)
+    public function update(Request $request, Tag $tag)
     {
         $request->validate([
             'name' => 'required'
         ]);
 
         $tag->update([
-            'name' => $request->name,
-
+            'name' => $request->name
         ]);
 
-        alert()->success('برند مورد نظر ویرایش شد', 'باتشکر');
+        alert()->success('تگ مورد نظر ویرایش شد', 'باتشکر');
         return redirect()->route('admin.tags.index');
     }
 

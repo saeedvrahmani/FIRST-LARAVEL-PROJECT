@@ -51,13 +51,17 @@ MIT License, https://github.com/cozeit/czMore/blob/master/LICENSE.md
               btnPlus.css({
                   'float': 'right',
                   'border': '0px',
-                  'background-image': 'url("img/add.png")',
+                  
                   'background-position': 'center center',
                   'background-repeat': 'no-repeat',
                   'height': '25px',
                   'width': '25px',
                   'cursor': 'pointer',
               });
+              btnPlus.append($('<i/>',{
+                class : 'fa fa-plus text-success',
+                
+              }));
             }
 
             if (recordset.length) {

@@ -32,8 +32,8 @@
                 aria-labelledby="searchDropdown">
                 <form class="form-inline mr-auto w-100 navbar-search">
                     <div class="input-group">
-                        <input type="text" class="form-control bg-light border-0 small order-2"
-                            placeholder="جستجو ..." aria-label="Search" aria-describedby="basic-addon2">
+                        <input type="text" class="form-control bg-light border-0 small order-2" placeholder="جستجو ..."
+                            aria-label="Search" aria-describedby="basic-addon2">
                         <div class="input-group-append">
                             <button class="btn btn-primary" type="button">
                                 <i class="fas fa-search fa-sm"></i>
@@ -107,8 +107,8 @@
 
         <!-- Nav Item - Messages -->
         <li class="nav-item dropdown no-arrow mx-1">
-            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
                 <i class="fas fa-envelope fa-fw"></i>
                 <!-- Counter - Messages -->
                 <span class="badge badge-danger badge-counter">7</span>
@@ -187,8 +187,8 @@
 
         <!-- Nav Item - User Information -->
         <li class="nav-item dropdown no-arrow">
-            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
                 <span class="ml-2 d-none d-lg-inline text-gray-600 small"> علی شیخ </span>
                 <img class="img-profile rounded-circle" src="{{ asset('/images/admin/user.jpg') }}">
             </a>

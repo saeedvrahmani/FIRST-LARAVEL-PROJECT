@@ -18,9 +18,13 @@ class Category extends Model
   }
   public function children()
   {
-    return $this->belongsTo(Category::class, 'parent_id');
+    return $this->hasMany(Category::class, 'parent_id');
   }
 
+  public function products()  {
+    
+    return $this->hasMany(Product::class);
+  }
 
   public function getIsActiveAttribute($is_active)
   {
@@ -31,4 +35,5 @@ class Category extends Model
   {
     return $this->belongsToMany(Attribute::class, 'attribute_category');
   }
+  
 }

@@ -45,6 +45,7 @@ class BrandController extends Controller
             'name' => $request->name,
             'is_active' => $request->is_active,
         ]);
+
         alert()->success('برند مورد نظر ایجاد شد', 'باتشکر');
         return redirect()->route('admin.brands.index');
     }
@@ -55,7 +56,7 @@ class BrandController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show( Brand $brand)
+    public function show(Brand $brand)
     {
         return view('admin.brands.show' , compact('brand'));
     }
